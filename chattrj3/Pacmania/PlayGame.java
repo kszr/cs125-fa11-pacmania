@@ -36,11 +36,9 @@ public class PlayGame {
 
 		CheeseList cheese = new CheeseList();
 		
-		boolean proceed=true;
-		
 		while(Zen.isRunning()) {
-
-			while(proceed) {
+				
+			if(lives>0 && level<3) {
 				g.drawGhost(g.getX(), g.getY());
 
 				for(int i=0; i<evilG.getSize(); i++)
@@ -72,7 +70,6 @@ public class PlayGame {
 
 				if(lives==0) {
 					hasWon=false;
-					break;
 				}
 
 				for(int i=0; i<cheese.getLength(); i++)
@@ -80,7 +77,8 @@ public class PlayGame {
 
 				score = cheese.cheeseEaten();
 
-				scoreEtc();			
+				scoreEtc();	
+		}
 
 
 				if(cheese.isListEaten() && level<2) {
@@ -104,19 +102,15 @@ public class PlayGame {
 					score=0;
 					levelThree();
 				}
+				
+			
 
-				if(level==3)
-					break;
+				if(lives==0 || level==3)
+					endOfGameMessage(hasWon);
 
 				Zen.sleep(10);
 				Zen.flipBuffer();
 			}
-		
-		proceed=false;
-		
-		endOfGameMessage(hasWon);
-		
-		}
 
 	}
 	
@@ -293,8 +287,11 @@ public class PlayGame {
 		Zen.setFont("Times-50");
 		
 		if(b)
-			Zen.drawText("Congratulations! You won!\nYour Score: "+totalScore, 250, 200);
+			Zen.drawText("Congratulations! You won!", 150, 200);
+		
 		else Zen.drawText("You lost.", 250, 200);
+		
+		Zen.drawText("Your Score: "+totalScore, 250, 270);
 		
 	}
 
