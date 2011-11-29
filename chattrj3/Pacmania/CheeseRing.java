@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author chattrj3
+ *
+ */
 public class CheeseRing {
 	private Cheese[] ring = new Cheese[6];
 	
