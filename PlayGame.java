@@ -1,5 +1,3 @@
-import java.awt.event.KeyEvent;
-
 /**
  * THE GAME: You are the blue ghost Inky. Your goal is to collect as many wedges of cheese as you can
  * while evading the evil ghosts. You have three deaths (since talking about "lives" would
@@ -17,6 +15,8 @@ import java.awt.event.KeyEvent;
  * @author chattrj3
  *
  */
+
+import java.awt.event.KeyEvent;
 
 public class PlayGame {
 	private static final long START_TIME=System.currentTimeMillis();
