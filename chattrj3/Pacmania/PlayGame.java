@@ -2,16 +2,17 @@ import java.awt.event.KeyEvent;
 
 /**
  * THE GAME: You are the blue ghost Inky. Your goal is to collect as many wedges of cheese as you can
- * while evading the evil ghosts.
+ * while evading the evil ghosts. You have three deaths (since talking about "lives" would
+ * be meaningless), and three levels to get past.
  * 
  * THE BACK-STORY: Inky decides that pursuing cheese is more fruitful than pursuing Pacman. Unfortunately,
- * the path to cheese nirvana is not without its dangers. The object is to gather as many cheese wedges as
- * you can while evading the evil ghosts. You only have three deaths (since talking about "lives" would
- * be meaningless).
+ * the path to cheese nirvana is not without its dangers.
  * 
- * There are three levels (so far). In levels one and two, each piece of cheese is worth one point. You have
- * to deal with one evil ghost in level one, and with two in level two, one of which is slightly faster than
- * the other. Each piece of cheese is worth ten points in level three. 
+ * ABOUT THE LEVELS:
+ * 1. Level 1: Each cheese piece is worth 1 point, and you are pursued by one rather sluggish evil ghost.
+ * 2. Level 2: Each cheese piece is worth 1 point, and a second, faster ghost joins the first.
+ * 3. Level 3: Each cheese piece is worth 10 points, since it is presumably that much harder to get it.
+ * 			   You are pursued by the same two ghosts as in Level 2.
  * 
  * @author chattrj3
  *
